@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NeuroProject>
+  <NetStruct Name="NetStruct">
+    <Layer Size="4" Name="Input">
+      <ActivationFunction Type="ActivationLinear" />
+    </Layer>
+    <HiddenLayers>
+      <ActivationFunction Type="ActivationTANH" />
+      <Layer Size="1">
+        <ActivationFunction Type="ActivationTANH" />
+      </Layer>
+    </HiddenLayers>
+    <Layer Size="1" Name="Output">
+      <ActivationFunction Type="ActivationLinear" />
+    </Layer>
+  </NetStruct>
+  <TrainerConfig Type="ResilientPropagation" Name="TrainerConfig" />
+  <RandomConfig Type="AutoRandomDecorator" Name="RandomConfig" />
+  <DataProcessor Type="BatchDataProcessor" Name="DataProcessor">
+    <DataProcessor Type="SimpleFunctionalPreprocessorLogic" IsUsed="false" CorrelationSelectMode="Mean" />
+    <DataProcessor Type="LinearScale" IsUsed="true" A="-1" B="1">
+      <InC C="3.5333333333333332" D="0.066666666666666666" />
+      <InC C="1" D="2" />
+      <InC C="1" D="0.66666666666666663" />
+      <InC C="1" D="2" />
+      <OutC C="1.0028085942985536" D="0.028085942985535736" />
+    </DataProcessor>
+  </DataProcessor>
+  <TrainingStopParams UseIterations="true" Iterations="200" UseTeachError="false" TeachError="0.01" UseTestError="false" TestError="0.01" Name="TrainingStopParams" />
+  <DataSet Name="TrainData">
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="65" />
+        <Data Index="1" Value="1" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="35.28" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="51" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="32.03" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="46" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="14.52" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="44" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="7.34" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="50" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="5.7" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="68" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.92" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="65" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.51" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="44" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.37" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="60" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.2" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="49" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.16" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="47" />
+        <Data Index="1" Value="1" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="52.94" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="55" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="29.21" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="47" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="5.8" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="55" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="2.95" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="53" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="2.7" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="55" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1.47" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="46" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1.01" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="63" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.44" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="47" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.43" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="47" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.13" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="41" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="51" />
+        <Data Index="1" Value="1" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="71.31" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="55" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="13.69" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="43" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="4.1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="48" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="3.84" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="52" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="2.02" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="51" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.75" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="42" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="70.28" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="63" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="17.72" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="61" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="9.35" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="38" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1.3" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="59" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="63.6" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="67" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="17.18" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="46" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="7.98" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="65" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="6.22" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="59" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="3.85" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+  </DataSet>
+  <DataSet Name="TestData">
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="65" />
+        <Data Index="1" Value="1" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="76.69" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="57" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="11.77" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="71" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="5.65" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="36" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1.68" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="65" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1.05" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="57" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.76" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="39" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.68" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="59" />
+        <Data Index="1" Value="0" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="1" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0.65" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+  </DataSet>
+  <DataSet Name="CheckData" />
+  <DataSet Name="CalcData" />
+  <ErrorGraphData Name="ErrorGraphData">
+    <DataSeries Id="TrainError">
+      <Point X="1" Y="59.136385573030438" />
+      <Point X="2" Y="42.38862252632245" />
+      <Point X="3" Y="27.688112700232182" />
+      <Point X="4" Y="28.777054378029181" />
+      <Point X="5" Y="27.210660912803124" />
+      <Point X="6" Y="24.546635152859992" />
+      <Point X="7" Y="22.38308649224906" />
+      <Point X="8" Y="20.988760732904716" />
+      <Point X="9" Y="21.15859946935916" />
+      <Point X="10" Y="20.949270432471931" />
+      <Point X="11" Y="21.031904605175317" />
+      <Point X="12" Y="20.778333057055338" />
+      <Point X="13" Y="20.574026006324907" />
+      <Point X="14" Y="20.486594466119122" />
+      <Point X="15" Y="20.179047707543237" />
+      <Point X="16" Y="19.874917630155672" />
+      <Point X="17" Y="19.610726574676384" />
+      <Point X="18" Y="19.447985123199306" />
+      <Point X="19" Y="19.552506954162368" />
+      <Point X="20" Y="19.423404303177026" />
+      <Point X="21" Y="19.264757441107953" />
+      <Point X="22" Y="19.109393112077328" />
+      <Point X="23" Y="18.961928305394927" />
+      <Point X="24" Y="18.847673845564465" />
+      <Point X="25" Y="19.087229651307155" />
+      <Point X="26" Y="18.765039622661174" />
+      <Point X="27" Y="18.648841740658558" />
+      <Point X="28" Y="18.526187831580632" />
+      <Point X="29" Y="18.40579875136028" />
+      <Point X="30" Y="18.599397868876576" />
+      <Point X="31" Y="18.270109466152981" />
+      <Point X="32" Y="18.192830734071606" />
+      <Point X="33" Y="18.280713193475247" />
+      <Point X="34" Y="18.190039118110366" />
+      <Point X="35" Y="18.136113036045217" />
+      <Point X="36" Y="18.09814224469174" />
+      <Point X="37" Y="18.066732197867317" />
+      <Point X="38" Y="18.077600823212094" />
+      <Point X="39" Y="18.042515347703812" />
+      <Point X="40" Y="18.017685320957568" />
+      <Point X="41" Y="17.99012148899978" />
+      <Point X="42" Y="17.961838441425858" />
+      <Point X="43" Y="17.935420768115033" />
+      <Point X="44" Y="18.00556118442087" />
+      <Point X="45" Y="17.93657844009152" />
+      <Point X="46" Y="17.922292142743203" />
+      <Point X="47" Y="17.909500699844372" />
+      <Point X="48" Y="17.900967153405208" />
+      <Point X="49" Y="17.94559550172508" />
+      <Point X="50" Y="17.894250756761089" />
+      <Point X="51" Y="17.899297196847165" />
+      <Point X="52" Y="17.888017752512127" />
+      <Point X="53" Y="17.882855416551465" />
+      <Point X="54" Y="17.877884788446128" />
+      <Point X="55" Y="17.87924263079" />
+      <Point X="56" Y="17.872703207926151" />
+      <Point X="57" Y="17.868422822654438" />
+      <Point X="58" Y="17.8641602226774" />
+      <Point X="59" Y="17.863020606456598" />
+      <Point X="60" Y="17.861760086127578" />
+      <Point X="61" Y="17.858228854164075" />
+      <Point X="62" Y="17.854482866043746" />
+      <Point X="63" Y="17.852459446827453" />
+      <Point X="64" Y="17.848572910846936" />
+      <Point X="65" Y="17.847167659226276" />
+      <Point X="66" Y="17.842316464040795" />
+      <Point X="67" Y="17.837326873709106" />
+      <Point X="68" Y="17.8317567085698" />
+      <Point X="69" Y="17.825707469423982" />
+      <Point X="70" Y="17.823140218489176" />
+      <Point X="71" Y="17.821198446303786" />
+      <Point X="72" Y="17.818009629748712" />
+      <Point X="73" Y="17.814017061051736" />
+      <Point X="74" Y="17.815382227569703" />
+      <Point X="75" Y="17.811737508991211" />
+      <Point X="76" Y="17.808292111744453" />
+      <Point X="77" Y="17.806764406381422" />
+      <Point X="78" Y="17.804487259771872" />
+      <Point X="79" Y="17.802816375789462" />
+      <Point X="80" Y="17.801272690800126" />
+      <Point X="81" Y="17.798493387041439" />
+      <Point X="82" Y="17.796911894844126" />
+      <Point X="83" Y="17.794253905086492" />
+      <Point X="84" Y="17.79265806461942" />
+      <Point X="85" Y="17.789928752697392" />
+      <Point X="86" Y="17.787071202315939" />
+      <Point X="87" Y="17.787130322788151" />
+      <Point X="88" Y="17.784900739344415" />
+      <Point X="89" Y="17.783149097956418" />
+      <Point X="90" Y="17.780723994826747" />
+      <Point X="91" Y="17.779271946070114" />
+      <Point X="92" Y="17.777959629213502" />
+      <Point X="93" Y="17.77583193970689" />
+      <Point X="94" Y="17.775247967505592" />
+      <Point X="95" Y="17.773331041418562" />
+      <Point X="96" Y="17.773716771010154" />
+      <Point X="97" Y="17.771788785163462" />
+      <Point X="98" Y="17.770389662699404" />
+      <Point X="99" Y="17.769834023224995" />
+      <Point X="100" Y="17.768919521696823" />
+      <Point X="101" Y="17.767735658745977" />
+      <Point X="102" Y="17.766888441369211" />
+      <Point X="103" Y="17.765590356741733" />
+      <Point X="104" Y="17.765068445592604" />
+      <Point X="105" Y="17.763862970292621" />
+      <Point X="106" Y="17.762817975276025" />
+      <Point X="107" Y="17.761475824865766" />
+      <Point X="108" Y="17.76111300660823" />
+      <Point X="109" Y="17.759622365299737" />
+      <Point X="110" Y="17.759253391176703" />
+      <Point X="111" Y="17.758259084498228" />
+      <Point X="112" Y="17.758306876108293" />
+      <Point X="113" Y="17.757198455005209" />
+      <Point X="114" Y="17.756156989955322" />
+      <Point X="115" Y="17.755936361824347" />
+      <Point X="116" Y="17.755155146532093" />
+      <Point X="117" Y="17.754514012970184" />
+      <Point X="118" Y="17.754378600988442" />
+      <Point X="119" Y="17.753188871941362" />
+      <Point X="120" Y="17.752174417166827" />
+      <Point X="121" Y="17.752324810861726" />
+      <Point X="122" Y="17.752244448324316" />
+      <Point X="123" Y="17.7516127798827" />
+      <Point X="124" Y="17.750939477786634" />
+      <Point X="125" Y="17.750197164939483" />
+      <Point X="126" Y="17.74990000756733" />
+      <Point X="127" Y="17.749345833273889" />
+      <Point X="128" Y="17.749489885396844" />
+      <Point X="129" Y="17.748809156391363" />
+      <Point X="130" Y="17.748123080266105" />
+      <Point X="131" Y="17.748195732495628" />
+      <Point X="132" Y="17.74816786167327" />
+      <Point X="133" Y="17.747784010825093" />
+      <Point X="134" Y="17.747346866509055" />
+      <Point X="135" Y="17.746855296422684" />
+      <Point X="136" Y="17.746669619059606" />
+      <Point X="137" Y="17.746293851198704" />
+      <Point X="138" Y="17.7459924071756" />
+      <Point X="139" Y="17.745957565369565" />
+      <Point X="140" Y="17.745378975614045" />
+      <Point X="141" Y="17.74496813987637" />
+      <Point X="142" Y="17.74445488584011" />
+      <Point X="143" Y="17.744524086405512" />
+      <Point X="144" Y="17.744366186489991" />
+      <Point X="145" Y="17.744032144528614" />
+      <Point X="146" Y="17.74365642320344" />
+      <Point X="147" Y="17.743493293438164" />
+      <Point X="148" Y="17.743195428271797" />
+      <Point X="149" Y="17.743177807443512" />
+      <Point X="150" Y="17.742846858110607" />
+      <Point X="151" Y="17.742510385831007" />
+      <Point X="152" Y="17.742323012045908" />
+      <Point X="153" Y="17.742012064604211" />
+      <Point X="154" Y="17.741763845026696" />
+      <Point X="155" Y="17.741410889316167" />
+      <Point X="156" Y="17.741190815449276" />
+      <Point X="157" Y="17.740886568292861" />
+      <Point X="158" Y="17.740450535123557" />
+      <Point X="159" Y="17.739945997026403" />
+      <Point X="160" Y="17.739368835281365" />
+      <Point X="161" Y="17.738717811330552" />
+      <Point X="162" Y="17.738563088593956" />
+      <Point X="163" Y="17.738588248188389" />
+      <Point X="164" Y="17.738115099728297" />
+      <Point X="165" Y="17.737882940920137" />
+      <Point X="166" Y="17.737650344825294" />
+      <Point X="167" Y="17.73758539116178" />
+      <Point X="168" Y="17.737410052910317" />
+      <Point X="169" Y="17.737114171690951" />
+      <Point X="170" Y="17.736783523983345" />
+      <Point X="171" Y="17.736411915728912" />
+      <Point X="172" Y="17.736002902903113" />
+      <Point X="173" Y="17.736502544510632" />
+      <Point X="174" Y="17.736025324044778" />
+      <Point X="175" Y="17.735841358216952" />
+      <Point X="176" Y="17.735701904935578" />
+      <Point X="177" Y="17.735616807487865" />
+      <Point X="178" Y="17.735325316863911" />
+      <Point X="179" Y="17.735097560118145" />
+      <Point X="180" Y="17.734825961794716" />
+      <Point X="181" Y="17.73453496272332" />
+      <Point X="182" Y="17.734235704241119" />
+      <Point X="183" Y="17.734530255962046" />
+      <Point X="184" Y="17.734005299139149" />
+      <Point X="185" Y="17.733706814541392" />
+      <Point X="186" Y="17.733365053968818" />
+      <Point X="187" Y="17.733554433782452" />
+      <Point X="188" Y="17.733121558239151" />
+      <Point X="189" Y="17.732856108951612" />
+      <Point X="190" Y="17.732477440762722" />
+      <Point X="191" Y="17.732059798736874" />
+      <Point X="192" Y="17.73167362080132" />
+      <Point X="193" Y="17.731423197549624" />
+      <Point X="194" Y="17.730946676839643" />
+      <Point X="195" Y="17.730383872812389" />
+      <Point X="196" Y="17.729725675486225" />
+      <Point X="197" Y="17.728967452468826" />
+      <Point X="198" Y="17.728111210044016" />
+      <Point X="199" Y="17.727081661457575" />
+      <Point X="200" Y="17.725928165606895" />
+    </DataSeries>
+    <DataSeries Id="TestError">
+      <Point X="1" Y="77.199578538432235" />
+      <Point X="2" Y="58.023457103948374" />
+      <Point X="3" Y="38.702130614186864" />
+      <Point X="4" Y="26.512304179974123" />
+      <Point X="5" Y="36.631193912873186" />
+      <Point X="6" Y="28.398902986330967" />
+      <Point X="7" Y="25.26736255352262" />
+      <Point X="8" Y="18.047415910658906" />
+      <Point X="9" Y="20.499916017556721" />
+      <Point X="10" Y="15.04725990623608" />
+      <Point X="11" Y="20.101829985584029" />
+      <Point X="12" Y="17.355594842378224" />
+      <Point X="13" Y="14.696599326081012" />
+      <Point X="14" Y="17.539952415847804" />
+      <Point X="15" Y="16.206028691453163" />
+      <Point X="16" Y="14.684782882129591" />
+      <Point X="17" Y="13.158264790309499" />
+      <Point X="18" Y="13.425552788199601" />
+      <Point X="19" Y="10.961928135236185" />
+      <Point X="20" Y="12.903251407829497" />
+      <Point X="21" Y="12.228468621064643" />
+      <Point X="22" Y="11.329754110442231" />
+      <Point X="23" Y="10.309853088740997" />
+      <Point X="24" Y="9.9944297590721209" />
+      <Point X="25" Y="8.1599997887381228" />
+      <Point X="26" Y="9.7612968978732049" />
+      <Point X="27" Y="9.5369886386614553" />
+      <Point X="28" Y="9.2813437700574859" />
+      <Point X="29" Y="9.3475009195438528" />
+      <Point X="30" Y="8.1033284255234523" />
+      <Point X="31" Y="9.7095003642496085" />
+      <Point X="32" Y="11.234264109360643" />
+      <Point X="33" Y="10.269055096013098" />
+      <Point X="34" Y="10.244347541718772" />
+      <Point X="35" Y="11.037819139668462" />
+      <Point X="36" Y="11.773298096023277" />
+      <Point X="37" Y="12.249604895396834" />
+      <Point X="38" Y="11.689066042528102" />
+      <Point X="39" Y="11.089287103762576" />
+      <Point X="40" Y="10.943461886873509" />
+      <Point X="41" Y="11.106446322961961" />
+      <Point X="42" Y="11.343748427556335" />
+      <Point X="43" Y="11.533185520397231" />
+      <Point X="44" Y="10.785461900206075" />
+      <Point X="45" Y="11.249336340581" />
+      <Point X="46" Y="11.611531596061315" />
+      <Point X="47" Y="11.90742657520433" />
+      <Point X="48" Y="12.303009721080864" />
+      <Point X="49" Y="10.881250870238246" />
+      <Point X="50" Y="11.295878016442686" />
+      <Point X="51" Y="12.006502795587076" />
+      <Point X="52" Y="11.397163043058171" />
+      <Point X="53" Y="11.556235798934409" />
+      <Point X="54" Y="11.604415418462326" />
+      <Point X="55" Y="12.029238187652275" />
+      <Point X="56" Y="11.710727533366127" />
+      <Point X="57" Y="11.766825022774547" />
+      <Point X="58" Y="11.846588292378843" />
+      <Point X="59" Y="12.225864137633161" />
+      <Point X="60" Y="11.739582907020987" />
+      <Point X="61" Y="11.845078058444937" />
+      <Point X="62" Y="11.928645302784989" />
+      <Point X="63" Y="11.957334373981427" />
+      <Point X="64" Y="12.005177472486583" />
+      <Point X="65" Y="12.163651172564458" />
+      <Point X="66" Y="12.213075311030776" />
+      <Point X="67" Y="12.267650099926813" />
+      <Point X="68" Y="12.336562730966309" />
+      <Point X="69" Y="12.4243021058408" />
+      <Point X="70" Y="12.87571017686237" />
+      <Point X="71" Y="12.627266898352849" />
+      <Point X="72" Y="13.039347601154066" />
+      <Point X="73" Y="13.311389856424235" />
+      <Point X="74" Y="12.676462459033816" />
+      <Point X="75" Y="12.900400535405074" />
+      <Point X="76" Y="12.997533296252778" />
+      <Point X="77" Y="13.328685974653665" />
+      <Point X="78" Y="13.279348111985806" />
+      <Point X="79" Y="13.599436938770712" />
+      <Point X="80" Y="13.07769691382083" />
+      <Point X="81" Y="13.064380025371788" />
+      <Point X="82" Y="13.227334243143066" />
+      <Point X="83" Y="13.2798115976655" />
+      <Point X="84" Y="13.173078349738384" />
+      <Point X="85" Y="13.060417912627384" />
+      <Point X="86" Y="13.0166036106047" />
+      <Point X="87" Y="13.273976923043909" />
+      <Point X="88" Y="13.209884677706901" />
+      <Point X="89" Y="13.355753247092403" />
+      <Point X="90" Y="13.405995152930705" />
+      <Point X="91" Y="13.087289584581683" />
+      <Point X="92" Y="13.092483044785425" />
+      <Point X="93" Y="13.059377898469988" />
+      <Point X="94" Y="13.301992186875818" />
+      <Point X="95" Y="13.357362512495879" />
+      <Point X="96" Y="13.31198216101804" />
+      <Point X="97" Y="13.156224677443451" />
+      <Point X="98" Y="13.193957255386751" />
+      <Point X="99" Y="13.248658768414714" />
+      <Point X="100" Y="13.420674496115929" />
+      <Point X="101" Y="13.50629233975395" />
+      <Point X="102" Y="13.247144322080276" />
+      <Point X="103" Y="13.280921339795768" />
+      <Point X="104" Y="13.410973968433106" />
+      <Point X="105" Y="13.459711023648705" />
+      <Point X="106" Y="13.256232280431474" />
+      <Point X="107" Y="13.215004636411038" />
+      <Point X="108" Y="13.407178791386118" />
+      <Point X="109" Y="13.243581965376874" />
+      <Point X="110" Y="13.428881193929481" />
+      <Point X="111" Y="13.481837693810247" />
+      <Point X="112" Y="13.443337688917566" />
+      <Point X="113" Y="13.326238602698407" />
+      <Point X="114" Y="13.358507388479875" />
+      <Point X="115" Y="13.475675851320798" />
+      <Point X="116" Y="13.522690026395153" />
+      <Point X="117" Y="13.338127001003681" />
+      <Point X="118" Y="13.483395592676956" />
+      <Point X="119" Y="13.363193874306232" />
+      <Point X="120" Y="13.398216869260255" />
+      <Point X="121" Y="13.444551204394802" />
+      <Point X="122" Y="13.379861620391372" />
+      <Point X="123" Y="13.400799461883221" />
+      <Point X="124" Y="13.399305954836645" />
+      <Point X="125" Y="13.397881700654477" />
+      <Point X="126" Y="13.50338819069604" />
+      <Point X="127" Y="13.54766237637752" />
+      <Point X="128" Y="13.514839541201312" />
+      <Point X="129" Y="13.427115244966394" />
+      <Point X="130" Y="13.454442147100881" />
+      <Point X="131" Y="13.489551419188158" />
+      <Point X="132" Y="13.461830362824184" />
+      <Point X="133" Y="13.46132437465587" />
+      <Point X="134" Y="13.460856751939854" />
+      <Point X="135" Y="13.460495884992621" />
+      <Point X="136" Y="13.539155027526215" />
+      <Point X="137" Y="13.572659620661762" />
+      <Point X="138" Y="13.4462710657838" />
+      <Point X="139" Y="13.54342517401386" />
+      <Point X="140" Y="13.497795156871693" />
+      <Point X="141" Y="13.451250339347522" />
+      <Point X="142" Y="13.446219285733928" />
+      <Point X="143" Y="13.522353525557337" />
+      <Point X="144" Y="13.488994951652113" />
+      <Point X="145" Y="13.486927453601563" />
+      <Point X="146" Y="13.484593955820786" />
+      <Point X="147" Y="13.551800612295898" />
+      <Point X="148" Y="13.578509881493513" />
+      <Point X="149" Y="13.548452130315777" />
+      <Point X="150" Y="13.509140451802098" />
+      <Point X="151" Y="13.501753053543354" />
+      <Point X="152" Y="13.553116389865824" />
+      <Point X="153" Y="13.582755748997178" />
+      <Point X="154" Y="13.475898659064059" />
+      <Point X="155" Y="13.449191132262966" />
+      <Point X="156" Y="13.450143860083893" />
+      <Point X="157" Y="13.47776444544346" />
+      <Point X="158" Y="13.483305844831433" />
+      <Point X="159" Y="13.480375244648094" />
+      <Point X="160" Y="13.476954391634518" />
+      <Point X="161" Y="13.472988828613353" />
+      <Point X="162" Y="13.272378070413978" />
+      <Point X="163" Y="13.155204993785627" />
+      <Point X="164" Y="13.200901530678715" />
+      <Point X="165" Y="13.360520869903041" />
+      <Point X="166" Y="13.45773934200154" />
+      <Point X="167" Y="13.272950329936256" />
+      <Point X="168" Y="13.356162790833197" />
+      <Point X="169" Y="13.351660868594411" />
+      <Point X="170" Y="13.34986336391751" />
+      <Point X="171" Y="13.347787410416684" />
+      <Point X="172" Y="13.345414109318707" />
+      <Point X="173" Y="13.268549521102067" />
+      <Point X="174" Y="13.330240658904065" />
+      <Point X="175" Y="13.290988865541539" />
+      <Point X="176" Y="13.351687056565892" />
+      <Point X="177" Y="13.438614533756315" />
+      <Point X="178" Y="13.329070256107272" />
+      <Point X="179" Y="13.328682686491414" />
+      <Point X="180" Y="13.319035014970579" />
+      <Point X="181" Y="13.307617916587292" />
+      <Point X="182" Y="13.29414803644492" />
+      <Point X="183" Y="13.364342965955563" />
+      <Point X="184" Y="13.312127867633681" />
+      <Point X="185" Y="13.303409100715905" />
+      <Point X="186" Y="13.293003704854852" />
+      <Point X="187" Y="13.399384283397495" />
+      <Point X="188" Y="13.38549396437913" />
+      <Point X="189" Y="13.299541863379021" />
+      <Point X="190" Y="13.296754713765512" />
+      <Point X="191" Y="13.275139039867124" />
+      <Point X="192" Y="13.296467365101442" />
+      <Point X="193" Y="13.309719591686765" />
+      <Point X="194" Y="13.289062955591499" />
+      <Point X="195" Y="13.296858506669974" />
+      <Point X="196" Y="13.291839952625587" />
+      <Point X="197" Y="13.285901068789578" />
+      <Point X="198" Y="13.296089606057246" />
+      <Point X="199" Y="13.266823899127658" />
+      <Point X="200" Y="13.225779173047341" />
+    </DataSeries>
+  </ErrorGraphData>
+  <TrainStatus TotalIterations="200" Name="NetData">
+    <Array Name="Weigths">
+      <Data Index="0" Value="1.117977681287561" />
+      <Data Index="1" Value="0.086495277430652" />
+      <Data Index="2" Value="-0.49786402391842638" />
+      <Data Index="3" Value="0.70566048273463255" />
+      <Data Index="4" Value="0.57391545850889014" />
+      <Data Index="5" Value="0.091302212150171869" />
+      <Data Index="6" Value="0.10199966780099909" />
+    </Array>
+  </TrainStatus>
+</NeuroProject>
